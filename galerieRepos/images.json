@@ -1,0 +1,19 @@
+{
+    "images": [
+        {
+            "name": "surf",
+            "url": "https://cdn.pixabay.com/photo/2016/03/09/15/16/wave-1246560_960_720.jpg",
+            "description": "Surfez les meilleurs vagues"
+        },
+        {
+            "name": "ski",
+            "url": "https://cdn.pixabay.com/photo/2014/10/22/18/04/skiing-498473_960_720.jpg",
+            "description": "Foncez schuss"
+        },
+        {
+            "name": "vélo",
+            "url": "https://cdn.pixabay.com/photo/2013/03/19/18/23/mountain-biking-95032_960_720.jpg",
+            "description": "Survolez les montagnes"
+        }
+    ]
+}

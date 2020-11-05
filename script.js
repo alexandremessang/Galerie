@@ -23,6 +23,14 @@ function loadImages() {
         'img/yoga.jpg'
     ];
 
+    window.fetch("./galerieRepos/images.json").then(function(res){
+        return res;
+    }.then(function(response){
+        console.log(res);
+    }).catch(function(err){
+        console.log(err);
+    }));
+
     srcImages.forEach(src => {
         let colDiv = document.createElement("div");
         let cardDiv = document.createElement("div");
