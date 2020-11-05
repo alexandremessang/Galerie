@@ -27,8 +27,10 @@ function loadImages() {
         return res.json();
     }).then(function(response){
         const data = response;
+        console.log(data);
         
-        data.forEach(src => {
+        
+        for(const src of data) {
             let colDiv = document.createElement("div");
             let cardDiv = document.createElement("div");
             let img = document.createElement("img");
@@ -66,7 +68,7 @@ function loadImages() {
     
             imageBox.appendChild(colDiv);
             numImage++;
-        });
+        };
     
         isLoad = true;
 
