@@ -1,0 +1,26 @@
+body {
+    background-color: lightblue !important;
+}
+
+#main_title {
+    margin-top: 5vh;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+.spinner-border {
+    margin-top: 20vh;
+    width: 5em !important;
+    height: 5em !important;
+}
+
+#image_box {
+    margin-top: 10vh;
+    margin-left: 2vw;
+}
+
+button {
+    margin-top: 5vh !important;
+}
