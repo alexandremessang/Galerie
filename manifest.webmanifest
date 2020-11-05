@@ -9,17 +9,17 @@
     "icons": [
       {
         "src": "img/home-icon.svg",
-        "type": "image/png",
+        
         "sizes": "48x48"
       },
       {
         "src": "img/home-icon.svg",
-        "type": "image/png",
+        
         "sizes": "96x96"
       },
       {
         "src": "img/home-icon.svg",
-        "type": "image/png",
+        
         "sizes": "192x192"
       }
     ],
