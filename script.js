@@ -24,6 +24,7 @@ function loadImages() {
     ];
 
     window.fetch("./galerieRepos/images.json").then(function(res){
+        console.log(res);
         return res;
     }.then(function(response){
         console.log(response);
