@@ -26,11 +26,11 @@ function loadImages() {
     window.fetch("./galerieRepos/images.json").then(function(res){
         console.log(res);
         return res;
-    }.then(function(response){
+    }).then(function(response){
         console.log(response);
     }).catch(function(err){
         console.log(err);
-    }));
+    });
 
     srcImages.forEach(src => {
         let colDiv = document.createElement("div");
