@@ -1,0 +1,27 @@
+{
+    "short_name": "Galerie",
+    "name": "Galerie PWA",
+    "theme_color": "#eb5252",
+    "background_color": "#000000",
+    "display": "fullscreen",
+    "Scope": "/",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "img/home-icon.svg",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "img/home-icon.svg",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "img/home-icon.svg",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "index.html?utm_source=homescreen"
+  }
