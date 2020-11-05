@@ -16,12 +16,7 @@ function loadImages() {
     document.getElementById("loading").style.visibility = "hidden";
     var imageBox = document.getElementById("image_box");
     let numImage = 1;
-    const srcImages = [
-        'img/biking.jpg',
-        'img/kitesurf.jpg',
-        'img/ski.jpg',
-        'img/yoga.jpg'
-    ];
+    
 
     window.fetch("./galerieRepos/images.json").then(function(res){
         return res.json();
