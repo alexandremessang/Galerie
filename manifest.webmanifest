@@ -8,18 +8,15 @@
     "orientation": "portrait",
     "icons": [
       {
-        "src": "img/home-icon.svg",
-        
+        "src": "img/home-icon48.svg",
         "sizes": "48x48"
       },
       {
-        "src": "img/home-icon.svg",
-        
+        "src": "img/home-icon96.svg",
         "sizes": "96x96"
       },
       {
-        "src": "img/home-icon.svg",
-        
+        "src": "img/home-icon192.svg",
         "sizes": "192x192"
       }
     ],
