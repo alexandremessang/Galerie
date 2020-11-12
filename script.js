@@ -18,7 +18,7 @@ function loadImages() {
     let numImage = 1;
     
 
-    window.fetch("https://api.pexels.com/v1/search?query=nature&per_page=1").then(function(res){
+    window.fetch("https://api.imgur.com/3/gallery/album/%7Bid%7D").then(function(res){
         return res.json();
     }).then(function(response){
         const data = response.images;
