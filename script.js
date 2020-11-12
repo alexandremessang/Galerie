@@ -18,7 +18,7 @@ function loadImages() {
     let numImage = 1;
     
 
-    window.fetch("./galerieRepos/images.json").then(function(res){
+    window.fetch("https://api.pexels.com/v1/search?query=nature&per_page=1").then(function(res){
         return res.json();
     }).then(function(response){
         const data = response.images;
