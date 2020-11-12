@@ -22,7 +22,7 @@ function loadImages() {
         return res.json();
     }).then(function(response){
         console.log(response);
-        const data = response;
+        const data = response.data;
         console.log(data);
         
         
