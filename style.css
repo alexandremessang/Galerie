@@ -24,3 +24,8 @@ body {
 button {
     margin-top: 5vh !important;
 }
+
+.card-image-top {
+    max-height: 200px;
+    min-height: 200px;
+}
