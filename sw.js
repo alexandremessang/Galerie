@@ -5,7 +5,8 @@ self.addEventListener('message',event=>{
 });
 
 self.addEventListener('fetch',event=>{
-    event.respondWith(new Response('PWA!!!!'));
+    console.log("PWA");
+    //event.respondWith(new Response('PWA!!!!'));
 });
 
 self.addEventListener('install',event=>{         
