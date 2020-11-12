@@ -18,7 +18,7 @@ function loadImages() {
     let numImage = 1;
     
 
-    window.fetch("https://api.imgur.com/3/gallery/album/%7Bid%7D").then(function(res){
+    window.fetch("https://api.imgur.com/3/gallery/hot/viral/0.json").then(function(res){
         return res.json();
     }).then(function(response){
         const data = response.images;
