@@ -40,16 +40,16 @@ function loadImages() {
             cardDiv.className = "card";
             cardDiv.style = "width: 18rem;";
     
-            img.src = src["url"];
+            img.src = src.link;
             img.className = "card-img-top";
     
             cardBodyDiv.className = "card-body";
     
             h5.className = "card-title"
-            h5.textContent = src["name"];
+            h5.textContent = src.title;
     
             p.className = "card-text";
-            p.textContent = src["description"];
+            p.textContent = src.topic;
     
             a.className = "btn btn-primary"
             a.href = "#"
