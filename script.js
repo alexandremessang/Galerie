@@ -44,6 +44,7 @@ function loadImages() {
                     cardDiv.className = "card";
                     cardDiv.style = "width: 18rem;";
                     
+                    img.link = src.link;
                     img.className = "card-img-top";
             
                     cardBodyDiv.className = "card-body";
