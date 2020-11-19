@@ -10,7 +10,11 @@ self.addEventListener('fetch',event=>{
 });
 
 self.addEventListener('install',event=>{         
-    event.waitUntil(Promise.resolve('Install phase succeed'));
+    event.waitUntil(
+        caches.open('main').then(function(cache) {
+            return cache.add('/index.html');
+        })
+    );
 });
 
 

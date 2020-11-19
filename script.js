@@ -81,7 +81,7 @@ function loadImages() {
 }
 
 
-if (navigator.offline) {
+/*if (navigator.offline) {
     window.addEventListener('offline', function(event) {
         
         event.waitUntil(
@@ -90,7 +90,7 @@ if (navigator.offline) {
           })
         );
     });
-};
+};*/
 
 
     
