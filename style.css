@@ -28,7 +28,6 @@ button {
 .offline {
     position: fixed;
     z-index: 50;
-    margin-bottom: 0;
     text-align: center;
 }
 
