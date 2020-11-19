@@ -86,8 +86,20 @@ if (navigator.offline) {
     window.addEventListener('offline', function(event) {
         
         event.waitUntil(
-          caches.open('v1').then(function(cache) {
+            window.getElementById('offline').setAttribute(visibility, 'visible'),
+            caches.open('v1').then(function(cache) {
             return cache.add('/index.html');
+          })
+        );
+    });
+};
+if (navigator.onLine) {
+    window.addEventListener('online', function(event) {
+        
+        event.waitUntil(
+            window.getElementById('offline').setAttribute(visibility, 'hidden'),
+            caches.open('v1').then(function(cache) {
+            return cache.delete('v1');
           })
         );
     });
