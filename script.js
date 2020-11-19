@@ -6,12 +6,12 @@ function preset() {
     loader();
 }
 
-function loader() {
+/*function loader() {
     if (!isLoad) {
         document.getElementById("loading").style.visibility = "visible";
         setTimeout(loadImages, 1000);
     }
-}
+}*/
 
 
 
