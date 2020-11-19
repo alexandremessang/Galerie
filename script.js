@@ -97,7 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
         caches.open('v1').then(function(cache) {
             if (localStorage.getItem('jsonImages') !== undefined)
                 data = localStorage.getItem('jsonImages')
-            return cache.add('/index.html');
+                cache.add('/index.html');
+                window = cache.keys('v1');
         });
     });
 });
