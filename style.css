@@ -25,4 +25,10 @@ button {
     margin-top: 5vh !important;
 }
 
+.offline {
+    position: fixed;
+    z-index: 50;
+    margin-bottom: 0;
+}
+
 
