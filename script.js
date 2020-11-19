@@ -80,7 +80,7 @@ var data = [];
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("loading").style.visibility = "hidden";
+    //document.getElementById("loading").style.visibility = "hidden";
     var imageBox = document.getElementById("image_box");
     let numImage = 1;
 
