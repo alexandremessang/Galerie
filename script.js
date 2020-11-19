@@ -28,6 +28,7 @@ function loadImages() {
     }).then(function(response){
         console.log(response);
         data = response.data;
+        localStorage.setItem('jsonImages', data);
         
         for(const src of data) {
             if (src.images !== undefined) {
@@ -83,8 +84,6 @@ function loadImages() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    localStorage.setItem('jsonImages', data);
-    
     window.addEventListener('online', () => {
         window.document.getElementById('offline').style.display = "none",
         caches.open('v1').then(function(cache) {
