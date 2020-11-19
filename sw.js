@@ -13,6 +13,7 @@ self.addEventListener('install',event=>{
     event.waitUntil(Promise.resolve('Install phase succeed'));
 });
 
+
 /*self.addEventListener('activate',function(event){         
     event.waitUntil();
 });*/

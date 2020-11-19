@@ -12,6 +12,10 @@ function loader() {
     }
 }
 
+
+
+
+
 function loadImages() {
     document.getElementById("loading").style.visibility = "hidden";
     var imageBox = document.getElementById("image_box");
@@ -74,6 +78,12 @@ function loadImages() {
     }).catch(function(err){
         console.log(err);
     });
+
+    if (navigator.offline) {
+        window.addEventListener('offline', event=>{
+           console.log("Vous etes hors ligne"); 
+        });
+    };
 
     
 }
