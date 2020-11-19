@@ -85,9 +85,11 @@ function loadImages() {
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('online', () => {
         window.document.getElementById('offline').style.display = "none",
+        localStorage.setItem('jsonImages', data);
         caches.open('v1').then(function(cache) {
             return cache.delete('v1');
         });
+        
     });
 
     window.addEventListener('offline', () => {
