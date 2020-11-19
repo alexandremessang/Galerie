@@ -86,7 +86,7 @@ if (navigator.offline) {
     window.addEventListener('offline', function(event) {
         
         event.waitUntil(
-            window.getElementById('offline').setAttribute(visibility, 'visible'),
+            window.getElementById('offline').style.display = "block",
             caches.open('v1').then(function(cache) {
             return cache.add('/index.html');
           })
@@ -97,7 +97,7 @@ if (navigator.onLine) {
     window.addEventListener('online', function(event) {
         
         event.waitUntil(
-            window.getElementById('offline').setAttribute(visibility, 'hidden'),
+            window.getElementById('offline').style.display = "none",
             caches.open('v1').then(function(cache) {
             return cache.delete('v1');
           })

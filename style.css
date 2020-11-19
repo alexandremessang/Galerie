@@ -26,8 +26,6 @@ button {
 }
 
 .offline {
-    position: fixed;
-    z-index: 50;
     width: 100%;
     margin-top: 0px;
     background-color: aliceblue;
