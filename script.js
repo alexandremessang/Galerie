@@ -1,5 +1,5 @@
 var isLoad = false;
-var jsonImages = [];
+var data = [];
 
 function preset() {
     document.getElementById("loading").style.visibility = "hidden";
@@ -27,8 +27,7 @@ function loadImages() {
         return res.json();
     }).then(function(response){
         console.log(response);
-        const data = response.data;
-        jsonImages = data;
+        data = response.data;
         
         for(const src of data) {
             if (src.images !== undefined) {
@@ -83,7 +82,7 @@ function loadImages() {
 }
 
 
-/*if (navigator.offline) {
+if (navigator.offline) {
     window.addEventListener('offline', function(event) {
         
         event.waitUntil(
@@ -92,7 +91,7 @@ function loadImages() {
           })
         );
     });
-};*/
+};
 
 
     
