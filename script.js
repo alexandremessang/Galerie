@@ -82,7 +82,7 @@ function loadImages() {
 
 if (navigator.offline) {
     window.addEventListener('offline', function(event) {
-        const 
+        
         event.waitUntil(
           caches.open('v1').then(function(cache) {
             return cache.add('/index.html');
