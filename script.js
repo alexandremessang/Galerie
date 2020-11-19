@@ -40,10 +40,12 @@ function loadImages() {
             cardDiv.className = "card";
             cardDiv.style = "width: 18rem;";
             
-            if (src.images !== 'undefined')
+            if (src.images !== 'undefined') {
+            console.log(src.images);
                 img.src = src.images[0].link;
-            else
+            } else {
                 img.src = src.link;
+            }
             img.className = "card-img-top";
     
             cardBodyDiv.className = "card-body";
