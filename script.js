@@ -80,13 +80,18 @@ function loadImages() {
     });
 }
 
-(function () {
-    if (navigator.offline) {
-        window.addEventListener('offline', event=>{
-        console.log("Vous etes hors ligne"); 
-        });
-    };
-})();
+
+if (navigator.offline) {
+    window.addEventListener('offline', function(event) {
+        event.waitUntil(
+          caches.open('v1').then(function(cache) {
+            return cache.add('/index.html');
+          })
+        );
+    });
+};
+
+
     
 
 
