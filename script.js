@@ -78,15 +78,13 @@ function loadImages() {
     }).catch(function(err){
         console.log(err);
     });
-
-    if (navigator.offline) {
-        window.addEventListener('offline', event=>{
-           console.log("Vous etes hors ligne"); 
-        });
-    };
-
-    
 }
+
+if (navigator.offline) {
+    window.addEventListener('offline', event=>{
+       console.log("Vous etes hors ligne"); 
+    });
+};
 
     
 
