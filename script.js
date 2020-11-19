@@ -84,14 +84,14 @@ function loadImages() {
 
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('online', () => {
-        window.getElementById('offline').style.display = "none",
+        window.document.getElementById('offline').style.display = "none",
         caches.open('v1').then(function(cache) {
             return cache.delete('v1');
         });
     });
 
     window.addEventListener('offline', () => {
-        window.getElementById('offline').style.display = "block",
+        window.document.getElementById('offline').style.display = "block",
         caches.open('v1').then(function(cache) {
             return cache.add('/index.html');
         });
