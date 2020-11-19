@@ -5,7 +5,7 @@
 });*/
 
 self.addEventListener('fetch',event=>{
-    console.log("PWA");
+    console.log(event.request.url);
     //event.respondWith(new Response('PWA!!!!'));
 });
 
