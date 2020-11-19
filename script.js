@@ -54,9 +54,6 @@ function loadImages() {
                     h5.className = "card-title"
                     h5.textContent = src.title;
             
-                    p.className = "card-text";
-                    p.textContent = src.topic;
-            
                     a.className = "btn btn-primary"
                     a.href = "#"
                     a.textContent = "En savoir plus"
@@ -65,7 +62,6 @@ function loadImages() {
                     cardDiv.appendChild(img);
                     cardDiv.appendChild(cardBodyDiv);
                     cardBodyDiv.appendChild(h5);
-                    cardBodyDiv.appendChild(p);
                     cardBodyDiv.appendChild(a);
             
                     imageBox.appendChild(colDiv);
