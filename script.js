@@ -28,53 +28,52 @@ function loadImages() {
         console.log(response);
         const data = response.data;
         
-        
         for(const src of data) {
-            let colDiv = document.createElement("div");
-            let cardDiv = document.createElement("div");
-            let img = document.createElement("img");
-            let cardBodyDiv = document.createElement("div");
-            let h5 = document.createElement("h5");
-            let p = document.createElement("p");
-            let a = document.createElement("a");
-    
-            colDiv.className = "col col-sm-4";
-    
-            cardDiv.className = "card";
-            cardDiv.style = "width: 18rem;";
-            
             if (src.images !== undefined) {
-                img.src = src.images[0].link;
-            } else {
-                img.src = src.link;
+                if (src.images[0].type !== 'video/mp4'){
+                    let colDiv = document.createElement("div");
+                    let cardDiv = document.createElement("div");
+                    let img = document.createElement("img");
+                    let cardBodyDiv = document.createElement("div");
+                    let h5 = document.createElement("h5");
+                    let p = document.createElement("p");
+                    let a = document.createElement("a");
+            
+                    colDiv.className = "col col-sm-4";
+            
+                    cardDiv.className = "card";
+                    cardDiv.style = "width: 18rem;";
+                    
+                    img.className = "card-img-top";
+            
+                    cardBodyDiv.className = "card-body";
+            
+                    h5.className = "card-title"
+                    h5.textContent = src.title;
+            
+                    p.className = "card-text";
+                    p.textContent = src.topic;
+            
+                    a.className = "btn btn-primary"
+                    a.href = "#"
+                    a.textContent = "En savoir plus"
+            
+                    colDiv.appendChild(cardDiv);
+                    cardDiv.appendChild(img);
+                    cardDiv.appendChild(cardBodyDiv);
+                    cardBodyDiv.appendChild(h5);
+                    cardBodyDiv.appendChild(p);
+                    cardBodyDiv.appendChild(a);
+            
+                    imageBox.appendChild(colDiv);
+                    numImage++;
+                        
+                    };
+            
+                    isLoad = true;
+                }
             }
-            img.className = "card-img-top";
-    
-            cardBodyDiv.className = "card-body";
-    
-            h5.className = "card-title"
-            h5.textContent = src.title;
-    
-            p.className = "card-text";
-            p.textContent = src.topic;
-    
-            a.className = "btn btn-primary"
-            a.href = "#"
-            a.textContent = "En savoir plus"
-    
-            colDiv.appendChild(cardDiv);
-            cardDiv.appendChild(img);
-            cardDiv.appendChild(cardBodyDiv);
-            cardBodyDiv.appendChild(h5);
-            cardBodyDiv.appendChild(p);
-            cardBodyDiv.appendChild(a);
-    
-            imageBox.appendChild(colDiv);
-            numImage++;
-                
-            };
-    
-        isLoad = true;
+            
     }).catch(function(err){
         console.log(err);
     });
@@ -83,6 +82,7 @@ function loadImages() {
 
 if (navigator.offline) {
     window.addEventListener('offline', function(event) {
+        const 
         event.waitUntil(
           caches.open('v1').then(function(cache) {
             return cache.add('/index.html');
