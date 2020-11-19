@@ -40,7 +40,7 @@ function loadImages() {
             cardDiv.className = "card";
             cardDiv.style = "width: 18rem;";
             
-            if (src.images != 'undefined')
+            if (src.images !== 'undefined')
                 img.src = src.images[0].link;
             else
                 img.src = src.link;
