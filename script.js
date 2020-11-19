@@ -1,10 +1,10 @@
 var isLoad = false;
 var data = [];
 
-function preset() {
+/*function preset() {
     document.getElementById("loading").style.visibility = "hidden";
     loader();
-}
+}*/
 
 /*function loader() {
     if (!isLoad) {
