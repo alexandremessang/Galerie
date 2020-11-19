@@ -28,6 +28,11 @@ button {
 .offline {
     position: fixed;
     z-index: 50;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+.offline h3 {
     text-align: center;
 }
 
