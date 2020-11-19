@@ -1,4 +1,5 @@
 var isLoad = false;
+var jsonImages = [];
 
 function preset() {
     document.getElementById("loading").style.visibility = "hidden";
@@ -27,6 +28,7 @@ function loadImages() {
     }).then(function(response){
         console.log(response);
         const data = response.data;
+        jsonImages = data;
         
         for(const src of data) {
             if (src.images !== undefined) {

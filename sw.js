@@ -12,7 +12,10 @@ self.addEventListener('fetch',event=>{
 self.addEventListener('install',event=>{         
     event.waitUntil(
         caches.open('main').then(function(cache) {
-            return cache.add('/index.html');
+            return cache.addAll([
+                '/index.html',
+                '/script.js'    
+            ]);
         })
     );
 });
