@@ -23,7 +23,6 @@ function loadImages() {
     }).then(function(response){
         console.log(response);
         const data = response.data;
-        console.log(data);
         
         
         for(const src of data) {
