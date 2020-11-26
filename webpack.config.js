@@ -4,8 +4,8 @@ const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 module.exports = {
     entry: [
         "./script.js",
-        //"./index.html",
-        //"./sw.js"
+        // "./index.html",
+        // "./sw.js"
     ],
     output: {
         filename: "main.js",
