@@ -4,12 +4,12 @@
     });
 });*/
 
-self.addEventListener('fetch',event=>{
+self.addEventListener('fetch', event => {
     console.log(event.request.url);
     //event.respondWith(new Response('PWA!!!!'));
 });
 
-self.addEventListener('install',event=>{         
+self.addEventListener('install', event => {         
     event.waitUntil(
         caches.open('main').then(function(cache) {
             return cache.addAll([
