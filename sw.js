@@ -4,8 +4,8 @@
     });
 });*/
 
-self.addEventListener('fetch', event => {
-    //event.respondWith(new Response('PWA!!!!'));
+self.addEventListener('fetch', event => { 
+    // event.respondWith(new Response('PWA!!!!'));
 });
 
 self.addEventListener('install', event => {         
