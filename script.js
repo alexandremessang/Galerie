@@ -80,20 +80,25 @@ function loadImages() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-   
-        window.addEventListener('online', () => {
-            window.document.getElementById('offline').style.display = "none",
+    if (navigator.onLine) {
+        document.getElementById('offline').style.display = "none";
+    }
 
-        window.addEventListener('offline', () => {
-            window.document.getElementById('offline').style.display = "block",
-            caches.open('v1').then(function(cache) {
-                if (localStorage.getItem('jsonImages') !== undefined)
-                    data = localStorage.getItem('jsonImages')
-                    cache.add('/index.html');
-                    window = cache.keys('v1');
-            });
+    window.addEventListener('online', () => {
+        window.document.getElementById('offline').style.display = "none";
+    });
+
+    window.addEventListener('offline', () => {
+        window.document.getElementById('offline').style.display = "block";
+        caches.open('v1').then(function(cache) {
+            if (localStorage.getItem('jsonImages') !== undefined) {
+                data = localStorage.getItem('jsonImages')
+                cache.add('/index.html');
+                window = cache.keys('v1');
+            }
         });
     });
+    
 });
 
 
