@@ -26,7 +26,6 @@ function loadImages() {
     window.fetch("https://api.imgur.com/3/gallery/hot/viral/0.json").then(function(res){
         return res.json();
     }).then(function(response){
-        console.log(response);
         data = response.data;
         localStorage.setItem('jsonImages', data);
         
