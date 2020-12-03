@@ -22,7 +22,8 @@ function loadImages() {
         return res.json();
     }).then(function(response){
         data = response.data;
-        localStorage.setItem('jsonImages', data);
+        let dataStringified = JSON.stringify(data);
+        localStorage.setItem('jsonImages', dataStringified);
         
         for(const src of data) {
             if (src.images !== undefined) {
@@ -53,6 +54,15 @@ function loadImages() {
                         if(this.className == "btn btn-primary") {
                             this.className = "btn btn-secondary";
                             this.textContent = "Favori";
+
+                            var content = [
+                                src.images[0].link,
+                                src.title,
+                            ]
+                            fetch("/favoris", {
+                                method: "POST",
+                                body: content
+                            })
                         } else {
                             this.className = "btn btn-primary";
                             this.textContent = "Ajouter en favori";

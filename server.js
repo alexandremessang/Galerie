@@ -8,7 +8,7 @@ const port = 3000;
 
 let favoris = [];
 app.get("/favoris", (request, response) => {
- response.send("favoris");
+ response.send(favoris);
 });
 app.post("/favoris", (request, response) => {
  console.log(request.body);
