@@ -55,7 +55,7 @@ function loadImages() {
                     a.className = "btn btn-primary";
                     a.href = "#";
                     a.textContent = "Ajouter en favori";   
-                    a.onclick = favChange();  
+                    a.onclick = "favChange()";  
             
                     colDiv.appendChild(cardDiv);
                     cardDiv.appendChild(img);
