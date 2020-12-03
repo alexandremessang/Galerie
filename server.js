@@ -13,7 +13,7 @@ app.get("/favoris", (request, response) => {
 app.post("/favoris", (request, response) => {
  //console.log(request.body);
  favoris = request.body;
- console.log(favoris);
+ //console.log(favoris);
  response.send(favoris);
 });
 app.listen(port, err => {
