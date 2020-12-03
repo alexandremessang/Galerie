@@ -12,7 +12,7 @@ app.get("/favoris", (request, response) => {
 });
 app.post("/favoris", (request, response) => {
  console.log(request.body);
- favoris = request.body;
+ favoris = request.body.json();
  response.send(favoris);
 });
 app.listen(port, err => {
