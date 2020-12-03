@@ -59,8 +59,7 @@ function loadImages() {
 
                     star.src = "img/etoile_vide.svg";
                     star.alt = "favoris";
-                    star.height = "50px";
-                    star.width = "50px";
+                   
             
                     colDiv.appendChild(cardDiv);
                     cardDiv.appendChild(img);
