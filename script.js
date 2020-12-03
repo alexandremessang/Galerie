@@ -57,7 +57,7 @@ function loadImages() {
                     a.href = "#";
                     a.textContent = "En savoir plus";
 
-                    star.src = "etoile_vide.svg";
+                    star.src = "img/etoile_vide.svg";
                     star.alt = "favoris";
                     star.height = "50px";
                     star.width = "50px";
