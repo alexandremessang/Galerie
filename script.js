@@ -4,6 +4,13 @@ var data = [];
 function preset() {
     document.getElementById("loading").style.visibility = "hidden";
     loader();
+    if('serviceWorker'in navigator) {
+        navigator.serviceWorker.getRegistrations().then(registrations=> {
+            for (let registration of registrations){
+                registrations.unregister();
+            }
+        })
+    }
 }
 
 function loader() {
