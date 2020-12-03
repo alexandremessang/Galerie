@@ -4,9 +4,6 @@
     });
 });*/
 
-self.addEventListener('fetch', event => { 
-    // event.respondWith(new Response('PWA!!!!'));
-});
 
 self.addEventListener('install', event => {         
     event.waitUntil(
@@ -17,7 +14,7 @@ self.addEventListener('install', event => {
             ]);
         })
     );
-});
+}); 
 
 
 /*self.addEventListener('activate',function(event){         
