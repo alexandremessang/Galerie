@@ -13,7 +13,7 @@ app.get("/favoris", (request, response) => {
 app.post("/favoris", (request, response) => {
  console.log(request.body.json());
  favoris = request.body.json();
- response.send(favoris);
+ response.send(JSON.stringify(favoris));
 });
 app.listen(port, err => {
  console.log(`server is listening on ${port}`);});
