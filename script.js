@@ -55,14 +55,14 @@ function loadImages() {
                             this.className = "btn btn-secondary";
                             this.textContent = "Favoris";
 
-                            var content = [
-                                src.images[0].link,
-                                src.title,
-                            ]
+                            var content = {
+                                img: src.images[0].link,
+                                title: src.title,
+                            }
                             console.log(content);
                             fetch("http://localhost:3000/favoris", {
                                 method: "POST",
-                                body: JSON.stringify(content)
+                                body: content
                             })
                         } else {
                             this.className = "btn btn-primary";
