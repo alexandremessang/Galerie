@@ -55,17 +55,7 @@ function loadImages() {
                     a.className = "btn btn-primary";
                     a.href = "#";
                     a.textContent = "Ajouter en favori";   
-                    a.onclick = () => {
-                        console.log(this.className);
-                        if(this.className == "btn btn-primary") {
-                            this.className = "btn btn-secondary";
-                            this.textContent = "Favori";
-                        } else {
-                            this.className = "btn btn-primary";
-                            this.textContent = "Ajouter en favori";
-                        }
-                        
-                    }           
+                    a.onclick = favChange();  
             
                     colDiv.appendChild(cardDiv);
                     cardDiv.appendChild(img);
@@ -86,6 +76,18 @@ function loadImages() {
         console.log(err);
     });
 }
+
+function favChange(){
+    console.log(this.className);
+    if(this.className == "btn btn-primary") {
+        this.className = "btn btn-secondary";
+        this.textContent = "Favori";
+    } else {
+        this.className = "btn btn-primary";
+        this.textContent = "Ajouter en favori";
+    }
+}
+                        
 
 
 document.addEventListener("DOMContentLoaded", function () {
