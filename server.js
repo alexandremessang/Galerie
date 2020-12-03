@@ -11,9 +11,8 @@ app.get("/favoris", (request, response) => {
  response.send(favoris);
 });
 app.post("/favoris", (request, response) => {
- //console.log(request.body);
- favoris = request.body;
- //console.log(favoris);
+ console.log(request);
+ favoris.push(request.body)
  response.send(favoris);
 });
 app.listen(port, err => {
