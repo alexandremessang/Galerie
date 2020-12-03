@@ -11,9 +11,9 @@ app.get("/favoris", (request, response) => {
  response.send(favoris);
 });
 app.post("/favoris", (request, response) => {
- console.log(request.body.json());
- favoris = request.body.json();
- response.send(JSON.stringify(favoris));
+ console.log(request.body);
+ favoris = request.body;
+ response.send(favoris);
 });
 app.listen(port, err => {
  console.log(`server is listening on ${port}`);});
