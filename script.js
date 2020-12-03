@@ -62,7 +62,7 @@ function loadImages() {
                             console.log(content);
                             fetch("http://localhost:3000/favoris", {
                                 method: "POST",
-                                body: content
+                                body: JSON.stringify(content)
                             })
                         } else {
                             this.className = "btn btn-primary";
