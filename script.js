@@ -71,7 +71,6 @@ function loadImages() {
                     cardDiv.appendChild(cardBodyDiv);
                     cardBodyDiv.appendChild(h5);
                     cardBodyDiv.appendChild(a);
-                    cardBodyDiv.appendChild(star);
             
                     imageBox.appendChild(colDiv);
                     numImage++;
