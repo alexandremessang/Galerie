@@ -38,7 +38,6 @@ function loadImages() {
                     let cardBodyDiv = document.createElement("div");
                     let h5 = document.createElement("h5");
                     let a = document.createElement("a");
-                    let star = document.createElement("img");
             
                     colDiv.className = "col col-sm-4";
             
@@ -55,11 +54,17 @@ function loadImages() {
             
                     a.className = "btn btn-primary";
                     a.href = "#";
-                    a.textContent = "En savoir plus";
-
-                    star.src = "img/etoile_vide.svg";
-                    star.alt = "favoris";
-                   
+                    a.textContent = "Ajouter en favori";   
+                    a.onclick = () => {
+                        if(this.className == "btn btn-primary") {
+                            this.className = "btn btn-secondary";
+                            this.textContent = "Favori";
+                        } else {
+                            this.className = "btn btn-primary";
+                            this.textContent = "Ajouter en favori";
+                        }
+                        
+                    }           
             
                     colDiv.appendChild(cardDiv);
                     cardDiv.appendChild(img);
