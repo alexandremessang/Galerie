@@ -53,13 +53,13 @@ function loadImages() {
                     a.addEventListener('click', function() {
                         if(this.className == "btn btn-primary") {
                             this.className = "btn btn-secondary";
-                            this.textContent = "Favori";
+                            this.textContent = "Favoris";
 
                             var content = [
                                 src.images[0].link,
                                 src.title,
                             ]
-                            fetch("/favoris", {
+                            fetch("http://localhost:3000//favoris", {
                                 method: "POST",
                                 body: content
                             })
