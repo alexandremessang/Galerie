@@ -37,8 +37,8 @@ function loadImages() {
                     let img = document.createElement("img");
                     let cardBodyDiv = document.createElement("div");
                     let h5 = document.createElement("h5");
-                    let p = document.createElement("p");
                     let a = document.createElement("a");
+                    let star = document.createElement("img");
             
                     colDiv.className = "col col-sm-4";
             
@@ -50,18 +50,24 @@ function loadImages() {
             
                     cardBodyDiv.className = "card-body";
             
-                    h5.className = "card-title"
+                    h5.className = "card-title";
                     h5.textContent = src.title;
             
-                    a.className = "btn btn-primary"
-                    a.href = "#"
-                    a.textContent = "En savoir plus"
+                    a.className = "btn btn-primary";
+                    a.href = "#";
+                    a.textContent = "En savoir plus";
+
+                    star.src = "etoile_vide.svg";
+                    star.alt = "favoris";
+                    star.height = "50px";
+                    star.width = "50px";
             
                     colDiv.appendChild(cardDiv);
                     cardDiv.appendChild(img);
                     cardDiv.appendChild(cardBodyDiv);
                     cardBodyDiv.appendChild(h5);
                     cardBodyDiv.appendChild(a);
+                    cardBodyDiv.appendChild(star);
             
                     imageBox.appendChild(colDiv);
                     numImage++;
