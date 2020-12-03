@@ -56,6 +56,7 @@ function loadImages() {
                     a.href = "#";
                     a.textContent = "Ajouter en favori";   
                     a.onclick = () => {
+                        console.log(this);
                         if(this.className == "btn btn-primary") {
                             this.className = "btn btn-secondary";
                             this.textContent = "Favori";
