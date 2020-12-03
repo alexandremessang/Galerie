@@ -11,7 +11,7 @@ app.get("/favoris", (request, response) => {
  response.send(favoris);
 });
 app.post("/favoris", (request, response) => {
- console.log(request.body);
+ //console.log(request.body);
  favoris = request.body;
  console.log(favoris);
  response.send(favoris);
