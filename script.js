@@ -59,7 +59,7 @@ function loadImages() {
                                 src.images[0].link,
                                 src.title,
                             ]
-                            fetch("http://localhost:3000//favoris", {
+                            fetch("http://localhost:3000/favoris", {
                                 method: "POST",
                                 body: content
                             })
