@@ -54,7 +54,6 @@ function loadImages() {
             
                     a.className = "btn btn-primary";
                     a.textContent = "Ajouter en favori";   
-                    //a.onclick = favChange();  
                     a.addEventListener('click', function() {
                         if(this.className == "btn btn-primary") {
                             this.className = "btn btn-secondary";
@@ -85,16 +84,6 @@ function loadImages() {
     });
 }
 
-function favChange(){
-    console.log(this.className);
-    if(this.className == "btn btn-primary") {
-        this.className = "btn btn-secondary";
-        this.textContent = "Favori";
-    } else {
-        this.className = "btn btn-primary";
-        this.textContent = "Ajouter en favori";
-    }
-}
                         
 
 
