@@ -11,9 +11,9 @@ app.get("/favoris", (request, response) => {
  response.send(favoris);
 });
 app.post("/favoris", (request, response) => {
- console.log(request.body);
- favoris.push(request.body)
- response.send(favoris);
+    favoris.push(request.body);
+    console.log(favoris);
+    response.send(favoris);
 });
 app.listen(port, err => {
  console.log(`server is listening on ${port}`);});
