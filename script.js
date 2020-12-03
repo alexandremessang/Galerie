@@ -27,7 +27,8 @@ function loadImages() {
         return res.json();
     }).then(function(response){
         data = response.data;
-        localStorage.setItem('jsonImages', data);
+        let tab = [data];
+        localStorage.setItem('jsonImages', tab);
         
         for(const src of data) {
             if (src.images !== undefined) {
