@@ -96,6 +96,13 @@ function loadImages() {
 document.addEventListener("DOMContentLoaded", function () {
     if (navigator.onLine) {
         document.getElementById('offline').style.display = "none";
+        caches.open('v1').then(function(cache) {
+            if (localStorage.getItem('jsonImages') !== undefined) {
+                data = localStorage.getItem('jsonImages')
+                cache.add('/index.html');
+                window = cache.keys('v1');
+            }
+        });
     }
 
     window.addEventListener('online', () => {
@@ -104,13 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('offline', () => {
         window.document.getElementById('offline').style.display = "block";
-        caches.open('v1').then(function(cache) {
-            if (localStorage.getItem('jsonImages') !== undefined) {
-                data = localStorage.getItem('jsonImages')
-                cache.add('/index.html');
-                window = cache.keys('v1');
-            }
-        });
     });
     
 });
