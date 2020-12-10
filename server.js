@@ -10,7 +10,7 @@ app.get("/favoris", (request, response) => {
  response.send(favoris);
 });
 app.post("/favoris", (request, response) => {
-    fconsole.log(request.body);
+    console.log(request.body);
     favoris = JSON.stringify(request.body);
     console.log(favoris)
     response.json(favoris);
