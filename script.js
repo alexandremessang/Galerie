@@ -22,8 +22,11 @@ function loadImages() {
         return res.json();
     }).then(function(response){
         data = response.data;
-        let dataStringified = JSON.stringify(data);
-        localStorage.setItem('jsonImages', dataStringified);
+        if(localStorage.getItem('jsonImages') !== undefined) {
+            let dataStringified = JSON.stringify(data);
+            localStorage.setItem('jsonImages', dataStringified);
+        }
+      
         
         for(const src of data) {
             if (src.images !== undefined) {
