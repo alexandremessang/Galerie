@@ -54,22 +54,16 @@ function loadImages() {
                         if(this.className == "btn btn-primary") {
                             this.className = "btn btn-secondary";
                             this.textContent = "Favoris";
-                            let content = new FormData();
-                            content.append("src", src.images[0].link);
-                            content.append("title", src.title)
 
-                            /*var content = {
+                            var content = JSON.stringify({
                                 img: src.images[0].link,
                                 title: src.title,
-                            }*/
-                            console.log(content);
-                            let req = new XMLHttpRequest();
-                            req.open("POST", "http://localhost:3000/favoris");
-                            req.send(content);
-                            /*fetch("http://localhost:3000/favoris", {
+                            })
+                            
+                            fetch("http://localhost:3000/favoris", {
                                 method: "POST",
                                 body: content
-                            })*/
+                            })
                         } else {
                             this.className = "btn btn-primary";
                             this.textContent = "Ajouter en favori";
